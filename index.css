@@ -1,0 +1,104 @@
+body{
+  font-family: 'Segoe UI',Arial,Sans-Serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfaf5;/*በጣም ለስላሳ ክሬም ከለር*/
+  color: #4a3728;/*ጠቀቆር ያለ ቡናማ*/
+}
+header{
+  background-color: #fffffff;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid #d4af37;
+}
+header h1{
+  color: #8b4513;/*የዳንቴል ስራን የሚገልፅ ቡናማ ከለር*/
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+/*የፎቶ ማሳያ ሳጥን(card design)*/
+.photo-container img{
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+.photo-container:hover{
+  transform: ttranslateY(-10px);/*ስልኩ ላይ ስትነኪው ትንሸ ከፍ ይላል*/
+}
+/*አዝራሮች(bottons)*/
+.contact-btn {
+  display: inline-block;
+  background-color: #d4af37;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.gallery-section {
+  padding: 20px;
+  text-align: container;
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit; minmax(250px,1fr));
+  gap: 15px;
+}
+.gallery-item {
+  border: 1px solid #ddd;
+border-radius: 8px;  
+overflow: hidden;
+background-color: #fff;
+box-shadow: 0 4px 6ox rgba(0,0,0,0,1);
+}
+.gallery-item img {
+  width: 100px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.item-info {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+img {
+  width: 300px;/*ስፋቱን ወደ 300 ፒክሰል ዝቅ ያደርገዋል*/
+  height: auto;/*ቁመቱ ከስፋቱ ጋር እንዲመጣጠን ያደርገዋል*/
+  border-radius: 10px;/*ዳር ዳሩን ክብ በማድረግ ውበት ይሰጠዋል*/
+  object-fit: cover;
+}
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;/*እስክሪኑ ሲጠብ ፎቶዎቹ ወደ ታች እንዲወርዱ*/
+  gap: 10px;/*በመካከላቸው ክፍተት ይሰጣል*/
+}
+.gallery-container img {
+  will-change: 200px;/*እኩል ስፋት*/
+  height: 200px;/*እኩል ቁመት/*
+  object-fit: cover;/*ፎቶው ሳይለጠጥ በሳጥኑ ልክ እንዲቆረጥ*/
+}
+main {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.photo container {
+  max-width: 100%;
+  margin: 0;
+  height: auto;
+  display: block;
+}
+footer {
+ text-align: center; 
+ padding: 20px;
+ margin-top: 50px;
+ font-size: 0.9rem;
+ color: #777;
+ background-color: #f1f1f1;
+}
