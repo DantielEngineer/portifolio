@@ -1,104 +1,139 @@
-body{
-  font-family: 'Segoe UI',Arial,Sans-Serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #fdfaf5;/*በጣም ለስላሳ ክሬም ከለር*/
-  color: #4a3728;/*ጠቀቆር ያለ ቡናማ*/
+CSS
+/* መሠረታዊ ቅንብሮች */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfaf5;
+    color: #333;
+    line-height: 1.6;
 }
-header{
-  background-color: #fffffff;
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 2px solid #d4af37;
+
+/* የራስጌ (Header) ክፍል */
+header {
+    text-align: center;
+    background-color: #f8f1e7;
+    padding: 60px 20px;
+    border-bottom: 8px solid #d4af37;
 }
-header h1{
-  color: #8b4513;/*የዳንቴል ስራን የሚገልፅ ቡናማ ከለር*/
-  margin-bottom: 10px;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
+
+header h1 {
+    color: #8b4513;
+    margin-bottom: 10px;
 }
-/*የፎቶ ማሳያ ሳጥን(card design)*/
-.photo-container img{
-  width: 100px;
-  height: auto;
-  border-radius: 10px;
-  display: block;
+
+/* የማውጫ (Nav) ክፍል */
+nav {
+    margin-top: 20px;
 }
-.photo-container:hover{
-  transform: ttranslateY(-10px);/*ስልኩ ላይ ስትነኪው ትንሸ ከፍ ይላል*/
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #8b4513;
+    font-weight: bold;
+    transition: color 0.3s;
 }
-/*አዝራሮች(bottons)*/
-.contact-btn {
-  display: inline-block;
-  background-color: #d4af37;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  margin-top: 20px;
+
+nav a:hover {
+    color: #d4af37;
 }
-.gallery-section {
-  padding: 20px;
-  text-align: container;
+
+/* ስለ እኔ (About Section) */
+.about-section {
+    background-color: #fef1e1;
+    padding: 40px;
+    margin: 40px auto;
+    border-radius: 20px;
+    max-width: 700px;
+    border-left: 10px solid #d4af37;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
+
+.about-content h3 {
+    color: #8b4513;
+    font-size: 1.8rem;
+}
+
+/* የምስል ማሳያ ካርዶች (Gallery Cards) */
+.photo-container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.photo-container:hover {
+    transform: scale(1.05); /* ትንሽ ከፍ እንዲል */
+}
+
+.photo-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* የጋለሪ (Gallery Grid) ክፍል */
 .gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit; minmax(250px,1fr));
-  gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
+
 .gallery-item {
-  border: 1px solid #ddd;
-border-radius: 8px;  
-overflow: hidden;
-background-color: #fff;
-box-shadow: 0 4px 6ox rgba(0,0,0,0,1);
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
 }
+
 .gallery-item img {
-  width: 100px;
-  height: 200px;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
 }
+
 .item-info {
-  padding: 10px;
-  font-size: 16px;
-  color: #333;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #8b4513;
 }
-img {
-  width: 300px;/*ስፋቱን ወደ 300 ፒክሰል ዝቅ ያደርገዋል*/
-  height: auto;/*ቁመቱ ከስፋቱ ጋር እንዲመጣጠን ያደርገዋል*/
-  border-radius: 10px;/*ዳር ዳሩን ክብ በማድረግ ውበት ይሰጠዋል*/
-  object-fit: cover;
+
+/* የመገናኛ ቁልፍ (Contact Button) */
+.contact-btn {
+    background-color: #d4af37;
+    color: white !important;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
 }
-.gallery-container {
-  display: flex;
-  flex-wrap: wrap;/*እስክሪኑ ሲጠብ ፎቶዎቹ ወደ ታች እንዲወርዱ*/
-  gap: 10px;/*በመካከላቸው ክፍተት ይሰጣል*/
+
+.contact-btn:hover {
+    background-color: #b8962d;
+    transform: translateY(-3px);
 }
-.gallery-container img {
-  will-change: 200px;/*እኩል ስፋት*/
-  height: 200px;/*እኩል ቁመት/*
-  object-fit: cover;/*ፎቶው ሳይለጠጥ በሳጥኑ ልክ እንዲቆረጥ*/
-}
-main {
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-.photo container {
-  max-width: 100%;
-  margin: 0;
-  height: auto;
-  display: block;
-}
+
+/* ግርጌ (Footer) */
 footer {
- text-align: center; 
- padding: 20px;
- margin-top: 50px;
- font-size: 0.9rem;
- color: #777;
- background-color: #f1f1f1;
+    background-color: #333;
+    color: #fff !important;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
 }
